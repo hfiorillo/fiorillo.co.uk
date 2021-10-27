@@ -9,9 +9,7 @@ tags:
     - automation
 classes: wide
 toc: false
-header: 
-    overlay_image: resources/_gen/assets/images/Kubernetes/k8s-pi.jpg 
-    overlay_filter: rgba(0, 0, 0, 0.4)
+cover: /img/Kubernetes/k8s-pi.jpg 
 published: true
 
 ---
@@ -93,7 +91,7 @@ Total cost for my set up came to around £200, I used Raspberry Pi 4B - 1 x 4GB 
 
 Follow through the Raspberry Pi assembly process for your cluster case. If you have a network switch, connect up the Ethernet cables to your Raspberry Pi's. Connecting via ethenet allows any data-intensive applciations to exchange instruction without being hampered by wireless LAN or other network traffic, not essential but it is nice. and they should look a little something like this. 
 
-![Pi-Cluster](resources/_gen/assets/images/Kubernetes/picluster.jpg)
+![Pi-Cluster](/img/Kubernetes/picluster.jpg)
 
 ## Setting up the Operating System
 
@@ -103,7 +101,7 @@ My OS of choice was the official [Rasperry Pi OS Lite](https://www.raspberrypi.o
 
 This process can be done via [Etcher](https://www.balena.io/etcher/). Simply plug in your microSD card reader, flash the `.zip` image file of your chosen OS to the microSD card.
 
-![Etcher Flashing Disk](resources/_gen/assets/images/Kubernetes/etcher.jpg)
+![Etcher Flashing Disk](/img/Kubernetes/etcher.jpg)
 
 **Manual process of flashing your microSD card using CLI:**
 
@@ -165,7 +163,7 @@ Or not, this process needs to be repeated for each Raspberry Pi in the cluster.
 
 Once all the Pi's have their subsequent microSD cards flashed, plug them in and power them on, allow them a few minutes to fully boot. Now we need to find them on our network; you can have a look on your router to see any new registered devices and their subsequent IP addresses or install a network scanner - I personally use [Angry IP Scanner](https://angryip.org/) as seen below, but you are free to use `nmap` or other networking mapping tools. Scan your network in the range of /24. For instance, my router IP was 192.168.1.1 and I scanned 192.168.1.1/24 to find all the devices on my network. The default Raspberry Pi hostname should be something like `raspberrypi.local` . Look for the corresponding IP addresses and make note.Locate all the Raspberry Pi's addresses and make note.
 
-![Angry IP Scanner](resources/_gen/assets/images/Kubernetes/angryip.png)
+![Angry IP Scanner](/img/Kubernetes/angryip.png)
 
 ### Setting up SSH Keys
 
@@ -213,11 +211,11 @@ cp -R inventory/sample inventory/my-cluster # copies the investory directory fro
 
 Open up the repository in a text editor and edit the Ansible inventory `hosts.ini` file to include the IP address of your 'master' and 'worker' nodes.
 
-![Ansible hosts](resources/_gen/assets/images/Kubernetes/ansible-host.png)
+![Ansible hosts](/img/Kubernetes/ansible-host.png)
 
 Next, make sure to edit `inventory/my-cluster/group_vars/all.yml` to match your environment. It should look something like this: 
 
-![Ansible all](/assets/images/Kubernetes/ansible-all.png)
+![Ansible all](/img//Kubernetes/ansible-all.png)
 
 Now run the following command and wait:
 

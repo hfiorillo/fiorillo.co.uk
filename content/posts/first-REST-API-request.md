@@ -10,9 +10,7 @@ tags:
     - scripts
 classes: wide
 toc: false
-header: 
-    overlay_image: resources/_gen/ssets/images/your-first-api-request/microsoft-azure-blog-header.png
-    overlay_filter: rgba(0, 0, 0, 0.4)
+cover: /img/your-first-api-request/microsoft-azure-blog-header.png
 published: true
 
 ---
@@ -54,7 +52,7 @@ To do this we can use the az cli to make a service principal with contributor pe
 1. In Thunder Client we will need to create a new Env which we will call Azure.
 2. Click on the Thunder Client VS Code Icon on the left hand side, select **Env** and then the 3 lines here you can create a new Environment.
 
-![resources/_gen/assets/images/your-first-api-request/Env.png](resources/_gen/assets/images/your-first-api-request/Env.png)
+![resources/_gen/img//your-first-api-request/Env.png](resources/_gen/img//your-first-api-request/Env.png)
 
 You will need to add the parameters listed below:
 
@@ -71,7 +69,7 @@ Once done, you can save and call it **Azure** or something similar.
 
 1. In Thunder Client, click 'New Request'
 
-    ![resources/_gen/assets/images/your-first-api-request/new-request.png](resources/_gen/assets/images/your-first-api-request/new-request.png)
+    ![resources/_gen/img//your-first-api-request/new-request.png](resources/_gen/img//your-first-api-request/new-request.png)
 
 2. Select Auth, then head to OAuth 2.0 and ensure Grant Type is set to **Client Credentials**.
 
@@ -89,7 +87,7 @@ Now you can input the following parameters to generate the token required for th
 
 `Scope : { {scope} }`
 
-![resources/_gen/assets/images/your-first-api-request/oauth.png](resources/_gen/assets/images/your-first-api-request/oauth.png)
+![resources/_gen/img//your-first-api-request/oauth.png](resources/_gen/img//your-first-api-request/oauth.png)
 
 You should now be able to generate a token!
 
@@ -103,11 +101,11 @@ If you interested in the breakdown of the token you can paste it into here [http
 4. Set the request type to **GET** and populate the URI with the following, remember to swap out the actual subscription ID with the ``{ {subscriptionID} }`` placeholder `https://management.azure.com/subscriptions/{ {subscriptionId} }/resources`
 5. Populate the query parameters with the appropriate api-version, this can change depending on the API you are calling (this can happen automatically if you copy the full request) in our case `api-version : 2021-04-01`
 
-    ![resources/_gen/assets/images/your-first-api-request/api-call.png](resources/_gen/assets/images/your-first-api-request/api-call.png)
+    ![resources/_gen/img//your-first-api-request/api-call.png](resources/_gen/img//your-first-api-request/api-call.png)
 
 6. Should receive a successful **200 OK status code**. If you receive anything else, take a look a these [HTTP Status code requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
 
-    ![resources/_gen/assets/images/your-first-api-request/statuscode.png](resources/_gen/assets/images/your-first-api-request/statuscode.png)
+    ![resources/_gen/img//your-first-api-request/statuscode.png](resources/_gen/img//your-first-api-request/statuscode.png)
 
 ### Great... Now what?
 

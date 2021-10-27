@@ -8,9 +8,7 @@ tags:
     - single-board computers
 classes: wide
 toc: false
-header: 
-    overlay_image: /assets/images/raspberry-pi-logo.jpg 
-    overlay_filter: rgba(0, 0, 0, 0.4)
+cover: /img/raspberry-pi-logo.jpg 
 published: true
 ---
 A brief introduction to the Raspberry Pi Foundation and their latest single board computer.
@@ -30,7 +28,7 @@ Currently, there a wide variety of different Raspberry Pi computers to choose fr
 The specs of the latest Pi model, the Raspberry Pi 4B, it has a 1.5-Ghz Broadcom quad-core Cortex-A72 (BCM2711B0) CPU and ARM VideoCoreVI GPU, LPDDR4 RAM (from 2GB to 8GB), 2 USB 3.0 ports, 2 USB 2.0 ports, dual micro-HDMI ports, 3.5mm audio jack, full-sized gigabit ethernet port, 802.11ac dual-band Wifi, Bluetooth 5.0 and 50 mb/s micro SD card reader. Atop the board there is a Camera Serial Interface and a Display Serial Interface. As well as all this, the best part of any Pi is its set of 40 GPIO pins; these allow you connect lights, fans, motors, sensors and a range of HATs (expansion boards that sit atop the Pi). The device is powered over USB Type-C and only requires a steady 3 amps of power and 5 volts.
 
 Raspberry Pi 4B (mine has small heat sinks on the Pi for cooling):
-![A picture of my Raspberry Pi 4B](/assets/images/raspberry-pi4b-1.jpg)
+![A picture of my Raspberry Pi 4B](/img/raspberry-pi4b-1.jpg)
 
 **Operating sytem** 
 

@@ -12,9 +12,7 @@ tags:
     - Prometheus
 classes: wide
 toc: false
-header: 
-    overlay_image: assets/images/Kubernetes/monitoring/monitoroverlay.png 
-    overlay_filter: rgba(0, 0, 0, 0.4)
+cover: /img/Kubernetes/monitoring/monitoroverlay.png 
 published: true
 
 ---
@@ -41,7 +39,7 @@ Kubernetes is more complex; there are a lot more moving parts that go into its a
 
 *Application layer:* A top the infrastructure and kubernetes layer, you have the applications running on them. These apps contain many different variables and are dynamically scheduled.
 
-![kubernetes-monitoring.jpeg](/assets/images/Kubernetes/monitoring/kubernetes-monitoring.jpeg)
+![kubernetes-monitoring.jpeg](/img//Kubernetes/monitoring/kubernetes-monitoring.jpeg)
 
 Source: [https://www.datadoghq.com/blog/monitoring-kubernetes-performance-metrics/#control-plane-metrics](https://www.datadoghq.com/blog/monitoring-kubernetes-performance-metrics/#control-plane-metrics)
 
@@ -53,7 +51,7 @@ Containers may only be alive for a few minutes at a time - they are [ephermeral]
 
 Modern applications are broken down into various components are loogsely coupled into something known as a ***microservice*** and these *microservices* are then kept in containers. In doing so allows all services to be operated independently and designed so that a change to any one service won't significantly affect other services. Kubernetes does the job distributing workloads by tracking the state of the components and ensuring they're available and ready. This means that each service can be distributed acorss multiple instances and containers are free to move across your infrastructure as needed. This can creates issues with [observability](https://opensource.com/article/19/10/open-source-observability-kubernetes) of your resources and workloads.
 
-![microservices.png](/assets/images/Kubernetes/monitoring/microservices.png)
+![microservices.png](/img//Kubernetes/monitoring/microservices.png)
 
 Source: [https://divante.com/blog/monolithic-architecture-vs-microservices/](https://divante.com/blog/monolithic-architecture-vs-microservices/)
 
@@ -133,7 +131,7 @@ The following can be used in conjuction with one another (we will be deploying t
 - Easily integrates with Prometheus using PromQL
 - Pre-built dashboards are readily available [online](https://grafana.com/grafana/dashboards)
 
-![promgraf.png](/assets/images/Kubernetes/monitoring/promgraf.png)
+![promgraf.png](/img//Kubernetes/monitoring/promgraf.png)
 
 Source: [https://codevalue.com/grafana/](https://codevalue.com/grafana/)
 
@@ -151,7 +149,7 @@ Flow of metrics in Prometheus and Grafana:
 
 [Kibana:](https://www.elastic.co/kibana) Data visualisation front end tool. It will create a dashboard for Elasticsearch. Allows you to explore the log data through a web interface and, build dashboards and queries to quickly answer questions and gain insight into your Kubernbetes applciations.
 
-![efkstack.png](/assets/images/Kubernetes/monitoring/efkstack.png)
+![efkstack.png](/img//Kubernetes/monitoring/efkstack.png)
 
 Source: [https://www.techmanyu.com/microservices-logging-using-efk/](https://www.techmanyu.com/microservices-logging-using-efk/)
 
